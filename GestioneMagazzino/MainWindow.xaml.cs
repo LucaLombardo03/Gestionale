@@ -40,13 +40,21 @@ namespace GestioneMagazzino
 
         private void BtnVedi_Click(object sender, RoutedEventArgs e)
         {
-            using (StreamReader rdfile = new StreamReader(file))
+        if (File.Exists(file))
+            try
             {
-                string sline;
-                while ((sline = rdfile.ReadLine()) != null)
+                using (StreamReader rdfile = new StreamReader(file))
                 {
-                    LstOggetti.Items.Add(sline.ToString());
+                    string sline;
+                    while ((sline = rdfile.ReadLine()) != null)
+                    {
+                        LstOggetti.Items.Add(sline.ToString());
+                    }
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Il file non esiste");
             }
         }
     }
