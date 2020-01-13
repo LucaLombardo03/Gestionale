@@ -32,7 +32,9 @@ namespace GestioneMagazzino
         {
             using (StreamWriter swoggetti = new StreamWriter(file, true))
             {
-                swoggetti.WriteLine(TxtOggetto.Text);
+                string prodotto = TxtNome.Text;
+                string prezzo = TxtPrezzo.Text;
+                swoggetti.WriteLine($"{prodotto}  {prezzo} €");
             }  
         }
 

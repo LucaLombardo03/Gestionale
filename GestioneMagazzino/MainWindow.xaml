@@ -8,10 +8,12 @@
         Title="MainWindow" Height="386" Width="654">
     <Grid>
         <Label Content="GESTIONE MAGAZZINO" HorizontalAlignment="Left" Height="45" Margin="170,10,0,0" VerticalAlignment="Top" Width="305" FontWeight="Bold" FontSize="26" Background="White" BorderBrush="#FFEEEEEE" Foreground="#FFFD0303"/>
-        <TextBox Name="TxtOggetto" HorizontalAlignment="Left" Height="45" Margin="45,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
-        <Button Name="BtnAggiungi" Content="AGGIUNGI " HorizontalAlignment="Left" Height="45" Margin="45,231,0,0" VerticalAlignment="Top" Width="275" Click="BtnAdd_Click"/>
+        <TextBox Name="TxtNome" HorizontalAlignment="Left" Height="45" Margin="45,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+        <Button Name="BtnAggiungi" Content="AGGIUNGI " HorizontalAlignment="Left" Height="45" Margin="45,190,0,0" VerticalAlignment="Top" Width="275" Click="BtnAggiungi_Click"/>
         <ListBox Name="LstOggetti" HorizontalAlignment="Left" Height="276" Margin="350,70,0,0" VerticalAlignment="Top" Width="286"/>
-        <Button x:Name="BtnVedi" Content="VEDI LISTA" HorizontalAlignment="Left" Height="45" Margin="45,301,0,0" VerticalAlignment="Top" Width="275" Click="BtnVedi_Click"/>
-
+        <Button x:Name="BtnVedi" Content="VEDI LISTA" HorizontalAlignment="Left" Height="45" Margin="45,255,0,0" VerticalAlignment="Top" Width="275" Click="BtnVedi_Click"/>
+        <TextBox x:Name="TxtPrezzo" HorizontalAlignment="Left" Height="45" Margin="195,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+        <Label Content="Inserisci nome:" HorizontalAlignment="Left" Height="40" Margin="45,70,0,0" VerticalAlignment="Top" Width="125" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Inserisci prezzo:" HorizontalAlignment="Left" Height="40" Margin="195,70,0,0" VerticalAlignment="Top" Width="125" FontWeight="Bold" FontSize="14"/>
     </Grid>
 </Window>
