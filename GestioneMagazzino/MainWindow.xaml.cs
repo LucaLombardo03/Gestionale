@@ -28,13 +28,24 @@ namespace GestioneMagazzino
             InitializeComponent();
         }
 
-        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        private void BtnAggiungi_Click(object sender, RoutedEventArgs e)
         {
-            using (StreamWriter swoggetti = new StreamWriter(file))
+            using (StreamWriter swoggetti = new StreamWriter(file, true))
             {
-                swoggetti.WriteLine(TxtOggetto.Text);   
+                swoggetti.WriteLine(TxtOggetto.Text);
+            }  
+        }
+
+        private void BtnVedi_Click(object sender, RoutedEventArgs e)
+        {
+            using (StreamReader rdfile = new StreamReader(file))
+            {
+                string sline;
+                while ((sline = rdfile.ReadLine()) != null)
+                {
+                    LstOggetti.Items.Add(sline.ToString());
+                }
             }
-            //LstOggetti.Items.Add(.ToString());
         }
     }
 }
